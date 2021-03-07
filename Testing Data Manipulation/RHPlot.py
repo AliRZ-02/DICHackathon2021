@@ -13,14 +13,15 @@ data = pd.read_csv('RHAVGDATA.csv')
 X = data[['YEAR']]
 # Output Data
 Y = data[['AVG']]
-X_train,X_test, y_train, y_test = train_test_split(X,Y,test_size=0.2)
+Y2 = data[['AVG_PRECIPITATION']]
+X_train,X_test, y_train, y_test = train_test_split(X,Y2,test_size=0.2)
 print(X_train)
 
 # Train
 model = LinearRegression()
 model.fit(X_train, y_train)
 predictions = model.predict(X_test)
-data.plot(x="YEAR", y="AVG", style="o")
+data.plot(x="YEAR", y="AVG_PRECIPITATION", style="o")
 plt.show()
 
 print("Root Mean Squared Error: ", np.sqrt(metrics.mean_squared_error(y_test,predictions)))

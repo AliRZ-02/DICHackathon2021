@@ -1,3 +1,13 @@
-h1 {
+html { 
+    background: url(../templates/images/background_one.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#websiteName {
+    text-align: center;
     color: white;
+    background-color: blue;
 }

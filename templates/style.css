@@ -1,5 +1,5 @@
-body { 
-    background: url(../templates/images/background_one.png) no-repeat center center fixed; 
+body {
+    background: url(../templates/images/background_one.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -10,21 +10,24 @@ body {
     font-family: titleFont;
     src: url(../templates/fonts/Candarab.ttf);
 }
+
+
 /*
 .row h1 {
     color: white;
     font-family: titleFont;
 }
 */
+
 #websiteName {
     text-align: center;
     font-family: titleFont;
-    color: rgba(0,33,115,1);
+    color: rgba(0, 33, 115, 1);
     width: 40%;
     margin-top: 2%;
     margin-left: 30%;
     margin-right: 30%;
-    background-image: linear-gradient(to bottom right, rgba(175,238,238,0.2), rgba(175,238,238,1));
+    background-image: linear-gradient(to bottom right, rgba(175, 238, 238, 0.2), rgba(175, 238, 238, 1));
     border-radius: 15px;
     border-style: solid;
     border-color: black;
@@ -39,6 +42,13 @@ body {
     border-color: white;
 }
 
+#placeholder {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: white;
+    font-size: 15px;
+}
+
 .row h1 {
     font-size: 45px;
 }
@@ -47,6 +57,8 @@ body {
     font-size: 30px;
     color: white;
 }
+
+
 /*
 #textRow {
     background-color: transparent;

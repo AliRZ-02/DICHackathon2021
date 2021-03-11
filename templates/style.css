@@ -46,7 +46,21 @@ body {
     border-radius: 15px;
     border-style: solid;
     border-color: white;
-    font-size: 15px;
+    margin-top: 4%;
+}
+
+#visualization {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: white;
+    margin-top: 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#footer {
+    margin-top: 5%;
+    background-color: gray;
 }
 
 .row h1 {

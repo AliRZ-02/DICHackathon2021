@@ -5,6 +5,16 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+@font-face {
+    font-family: titleFont;
+    src: url(../templates/fonts/Candarab.ttf);
+}
+
+.row h1 {
+    color: white;
+    font-family: titleFont;
+}
 /*
 #websiteName {
     text-align: center;

@@ -10,17 +10,44 @@ body {
     font-family: titleFont;
     src: url(../templates/fonts/Candarab.ttf);
 }
-
+/*
 .row h1 {
     color: white;
     font-family: titleFont;
 }
-/*
+*/
 #websiteName {
     text-align: center;
-    color: white;
+    font-family: titleFont;
+    color: rgba(0,33,115,1);
+    width: 40%;
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-image: linear-gradient(to bottom right, rgba(175,238,238,0.2), rgba(175,238,238,1));
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
 }
 
+#motto {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 15px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: white;
+}
+
+.row h1 {
+    font-size: 45px;
+}
+
+.row h2 {
+    font-size: 30px;
+    color: white;
+}
+/*
 #textRow {
     background-color: transparent;
 }

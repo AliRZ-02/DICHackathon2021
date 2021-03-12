@@ -62,6 +62,7 @@ body {
 #footer {
     margin-top: 5%;
     background-color: gray;
+    text-align: center;
 }
 
 .row h1 {
@@ -71,10 +72,4 @@ body {
 .row h2 {
     font-size: 30px;
     color: white;
-}
-
-
-/*
-#textRow {
-    background-color: transparent;
 }

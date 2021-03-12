@@ -43,6 +43,7 @@ body {
     background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
     border-style: solid;
     border-color: black;
+    padding: 2%;
 }
 
 #solution {
@@ -67,6 +68,7 @@ body {
 #footer {
     margin-top: 5%;
     background-color: gray;
+    text-align: center;
 }
 
 .row h1 {
@@ -80,10 +82,4 @@ body {
 .row h3 {
     font-size: 36px;
     text-align: center;
-}
-
-
-/*
-#textRow {
-    background-color: transparent;
 }

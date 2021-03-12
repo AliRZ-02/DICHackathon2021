@@ -28,7 +28,7 @@ body {
     margin-top: 2%;
     margin-left: 30%;
     margin-right: 30%;
-    background-image: linear-gradient(to bottom right, rgba(175, 238, 238, 0.2), rgba(175, 238, 238, 1));
+    background-image: linear-gradient(to bottom right, rgba(175, 238, 238, 0.4), rgba(175, 238, 238, 1));
     border-radius: 15px;
     border-style: solid;
     border-color: black;

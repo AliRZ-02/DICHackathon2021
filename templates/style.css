@@ -4,6 +4,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -54,8 +55,8 @@ body {
     border-style: solid;
     border-color: white;
     margin-top: 4%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 #footer {

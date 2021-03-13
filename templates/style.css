@@ -80,13 +80,15 @@ body {
     font-size: 20px;
     padding: 12px 28px;
     border-radius: 8px;
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
+    background-color: rgba(146, 135, 238, 1);
+    color: white;
 }
 
 .button1:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    background-color: blue;
-    color: white;
+    color: black;
+    background-color: rgb(201, 195, 250);
 }
 
 #footer {

@@ -12,17 +12,13 @@ body {
     src: url(../templates/fonts/Candarab.ttf);
 }
 
-
-/*
-.row h1 {
-    color: white;
-    font-family: titleFont;
+@font-face {
+    font-family: actualTitleFont;
+    src: url(../templaes/fonts/EBGaramond-Regular.ttf);
 }
-*/
 
 #websiteName {
     text-align: center;
-    font-family: titleFont;
     color: rgba(0, 33, 115, 1);
     width: 40%;
     margin-top: 2%;
@@ -34,6 +30,15 @@ body {
     border-color: black;
 }
 
+#websiteName h1 {
+    font-family: actualTitleFont;
+    text-decoration: bold;
+}
+
+#websiteName h2 {
+    font-family: titleFont;
+}
+
 #missionstatement {
     margin-top: 5%;
     margin-left: 5%;
@@ -43,7 +48,7 @@ body {
     background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
     border-style: solid;
     border-color: black;
-    padding: 2%;
+    padding: 1%;
 }
 
 #solution {
@@ -54,6 +59,7 @@ body {
     background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
     border-style: solid;
     border-color: black;
+    padding: 1%;
 }
 
 #visualization {
@@ -61,7 +67,7 @@ body {
     background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
     border-style: solid;
     border-color: black;
-    margin-top: 2%;
+    margin-top: 4%;
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -107,7 +113,7 @@ body {
 }
 
 .row h3 {
-    color: rgba(0, 33, 115, 1);
+    color: rgb(243, 41, 14);
     font-size: 36px;
     text-align: center;
     text-decoration: underline;

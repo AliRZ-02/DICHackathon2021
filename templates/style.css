@@ -58,20 +58,37 @@ body {
 
 #visualization {
     border-radius: 15px;
+    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
     border-style: solid;
-    border-color: white;
-    margin-top: 4%;
-    margin-left: 2%;
-    margin-right: 2%;
+    border-color: black;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #visualization img {
     border-radius: 15px;
+    padding: 2%;
 }
 
 #buttonBox {
     margin-top: 3%;
     text-align: center;
+}
+
+.button1 {
+    font-size: 20px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition-duration: 0.6s;
+    background-color: rgba(146, 135, 238, 1);
+    color: white;
+}
+
+.button1:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    background-color: rgb(201, 195, 250);
 }
 
 #footer {
@@ -92,15 +109,11 @@ body {
 .row h3 {
     font-size: 36px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .row h4 {
-    margin-top: 4%;
-    font-size: 25px;
+    font-size: 28px;
     text-align: center;
-    padding: 2%;
-    border-style: solid;
-    border-color: white;
-    border-radius: 15px;
-    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
+    text-decoration: underline;
 }

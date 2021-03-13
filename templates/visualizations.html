@@ -6,17 +6,14 @@ Purpose: HTML file describing the layout for the main site
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <title>Climatech</title>
 
     <!--    I Used Bootstrap for most styling, however, for @media queries, I ran into some issues, so I moved them all to
@@ -25,29 +22,31 @@ Purpose: HTML file describing the layout for the main site
         * {
             box-sizing: border-box;
         }
+        
         html {
-  background: url(../static/Images/daniel-roe-lpjb_UMOyx8-unsplash.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+            background: url(../static/Images/daniel-roe-lpjb_UMOyx8-unsplash.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
         body {
             background: url(../static/Images/nikhita-singhal-yi1Hd1I3V3Y-unsplash.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
             font-family: Verdana, sans-serif;
             font-size: 10vw
         }
+        
         @media (max-width: 575px) {
             body {
                 text-align: center;
                 background: #f5f6fa;
                 font-family: Verdana, sans-serif;
             }
-
         }
     </style>
 </head>
@@ -58,130 +57,123 @@ Purpose: HTML file describing the layout for the main site
 
 <body class="px-0; mx-0">
 
-<!-- The Main Icon and Name is put in a block that is visible here -->
+    <!-- The Main Icon and Name is put in a block that is visible here -->
 
-<div class="container-fluid p-0" style="background:#2d3436; overflow: hidden" >
-    <div class="row">
+    <div class="container-fluid p-0" style="background:#2d3436; overflow: hidden">
+        <div class="row">
 
-        <div class="col-sm-12 my-auto">
-            <h1 style="color: white; font-weight: lighter;
+            <div class="col-sm-12 my-auto">
+                <h1 style="color: white; font-weight: lighter;
                 margin-top: 0; font-size: 10vw; text-align: center"> Climatech </h1>
-        </div>
-
-    </div>
-</div>
-
-<!-- City Input Information Form is Here -->
-
-<div class="container-fluid p-0 border-white col-sm-12" style="overflow: hidden; margin-top: 2%; margin-bottom: 2%">
-    <div class="form-group my-auto" style="font-size: small">
-
-        <form class="row" action="/" method="POST" style="width: 100%; margin-left: 0.25%"
-              autocomplete="off">
-            <div class="col-sm-3">
+            </div>
 
         </div>
+    </div>
 
-            <input class="col-sm-3 form-control" type="text" name="city_name"
-                   id = "city_name" placeholder="City Name" style="text-align: center"
-            required>
-            <input type="submit" value="Search City" class="col-sm-3 btn btn-primary"
-                   id="search">
-            <div class="col-sm-3">
+    <!-- City Input Information Form is Here -->
+
+    <div class="container-fluid p-0 border-white col-sm-12" style="overflow: hidden; margin-top: 2%; margin-bottom: 2%">
+        <div class="form-group my-auto" style="font-size: small">
+
+            <form class="row" action="/" method="POST" style="width: 100%; margin-left: 0.25%" autocomplete="off">
+                <div class="col-sm-3">
+
+                </div>
+
+                <input class="col-sm-3 form-control" type="text" name="city_name" id="city_name" placeholder="City Name" style="text-align: center" required>
+                <input type="submit" value="Search City" class="col-sm-3 btn btn-primary" id="search">
+                <div class="col-sm-3">
+
+                </div>
+            </form>
 
         </div>
-        </form>
-
     </div>
-</div>
-<div class="container-fluid border border-dark">
-    <div class="row rounded">
-        <div class="col-sm-12 bg-dark text-light rounded border border-success" style="text-align: center">
-        <h2>
-            Toronto
-        </h2>
-    </div>
-</div>
-    <h1>
+    <div class="container-fluid border border-dark">
+        <div class="row rounded">
+            <div class="col-sm-12 bg-dark text-light rounded border border-success" style="text-align: center">
+                <h2>
+                    Toronto
+                </h2>
+            </div>
+        </div>
+        <h1>
 
-    </h1>
-    <div id="mapid" class="col-sm-12 bg-dark text-light rounded center-block border border-success" style="height: 200px">
-        <div>
-        <h1></h1>
-    </div>
-</div>
-
-    <div>
-        <h1></h1>
-    </div>
-
-<div class="row rounded">
-    <div class="col-sm-6">
-        <div class="container-fluid bg-dark text-light rounded border border-danger">
-            <h1 style="text-align: center">
-            Graph
         </h1>
+        <div id="mapid" class="col-sm-12 bg-dark text-light rounded center-block border border-success" style="height: 200px">
+            <div>
+                <h1></h1>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="container-fluid bg-dark text-light rounded border border-danger">
-            <h3 style="text-align: center">
-            Quick Stats
-        </h3>
-            <ul class="list-inline">
-                <li class="list" style="font-size: medium; text-align: center">
-                    Predicted Average Temperature:
+
+        <div>
+            <h1></h1>
+        </div>
+
+        <div class="row rounded">
+            <div class="col-sm-6">
+                <div class="container-fluid bg-dark text-light rounded border border-danger">
+                    <h1 style="text-align: center">
+                        Graph
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="container-fluid bg-dark text-light rounded border border-danger">
+                    <h3 style="text-align: center">
+                        Quick Stats
+                    </h3>
                     <ul class="list-inline">
                         <li class="list" style="font-size: medium; text-align: center">
-                    YEAR:
-                </li>
+                            Predicted Average Temperature:
+                            <ul class="list-inline">
+                                <li class="list" style="font-size: medium; text-align: center">
+                                    YEAR:
+                                </li>
+                                <li class="list" style="font-size: medium; text-align: center">
+                                    YEAR:
+                                </li>
+                                <li class="list" style="font-size: medium; text-align: center">
+                                    YEAR:
+                                </li>
+                            </ul>
+                        </li>
                         <li class="list" style="font-size: medium; text-align: center">
-                    YEAR:
-                </li>
-                <li class="list" style="font-size: medium; text-align: center">
-                    YEAR:
-                </li>
+                            Predicted Temperature Variance:
+                            <ul class="list-inline">
+                                <li class="list" style="font-size: medium; text-align: center">
+                                    YEAR:
+                                </li>
+                                <li class="list" style="font-size: medium; text-align: center">
+                                    YEAR:
+                                </li>
+                                <li class="list" style="font-size: medium; text-align: center">
+                                    YEAR:
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li class="list" style="font-size: medium; text-align: center">
-                    Predicted Temperature Variance:
-                    <ul class="list-inline">
-                        <li class="list" style="font-size: medium; text-align: center">
-                            YEAR:
-                        </li>
-                        <li class="list" style="font-size: medium; text-align: center">
-                            YEAR:
-                        </li>
-                        <li class="list" style="font-size: medium; text-align: center">
-                            YEAR:
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="col-sm-12">
-            <h1>
+                </div>
+                <div class="col-sm-12">
+                    <h1>
 
-            </h1>
+                    </h1>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 
-<script>
+    <script>
+        // initialize the map
+        var map = L.map('mapid').setView([43.65, -79.38], 13);
 
-  // initialize the map
-  var map = L.map('mapid').setView([43.65, -79.38], 13);
-
-  // load a tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      maxZoom: 17,
-      minZoom: 5
-    }).addTo(map);
-
-  </script>
+        // load a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 17,
+            minZoom: 5
+        }).addTo(map);
+    </script>
 </body>
 
 <!-- Footer and Credits -->
@@ -190,10 +182,10 @@ Purpose: HTML file describing the layout for the main site
     <div class="row">
         <div class="col-sm-12 my-auto">
             <h1 style="font-size: large; text-align: center; margin-top: 0.5%">
-                Developed by <i>Get Lepton</i> for the 2021 Challenge for Climate Action.
-                To find out more, check out the <a href="https://github.com/AliRZ-02/DICHackathon2021"> GitHub </a> repository
+                Developed by <i>Get Lepton</i> for the 2021 Challenge for Climate Action. To find out more, check out the <a href="https://github.com/AliRZ-02/DICHackathon2021"> GitHub</a> repository
             </h1>
         </div>
     </div>
 </footer>
+
 </html>

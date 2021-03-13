@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <title> ClimaTech </title>
     <!-- Insert Title still -->
 </head>
@@ -48,46 +49,27 @@
 
     <!-- Visualization -->
     <div class="row" id="visualization">
-        <p>hi</p>
-        <p>hello</p>
-        <p>hiya</p>
-        <p>hey</p>
         <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
+        <div id="visualizationSlides" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="item active">
-                    <img src="../Graphs/CharlottetownFall.png" alt="Charlottetown Fall">
+                <div class="carousel-item active">
+                    <img src="../graphs/CharlottetownFall.png" class="d-block w-100" alt="...">
                 </div>
-
-                <div class="item">
-                    <img src="../Graphs/CharlottetownSpring.png" alt="Charlottetown Spring">
+                <div class="carousel-item">
+                    <img src="../graphs/CharlottetownSpring.png" class="d-block w-100" alt="...">
                 </div>
-
-                <div class="item">
-                    <img src="../Graphs/CharlottetownSummer.png" alt="Charlottetown Summer">
+                <div class="carousel-item">
+                    <img src="../graphs/CharlottetownSummer.png" class="d-block w-100" alt="...">
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#visualizationSlides" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#visualizationSlides" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
 
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -99,9 +81,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
-        <h4><a href="../templates/visualizations.html">Click here to find out more about Canadian cities!</a></h4>
-        <img src="../graphs/CharlottetownFall.png">
     </div>
 
     <!-- Click Here Button -->

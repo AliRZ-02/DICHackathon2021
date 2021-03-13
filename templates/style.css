@@ -58,8 +58,9 @@ body {
 
 #visualization {
     border-radius: 15px;
+    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
     border-style: solid;
-    border-color: white;
+    border-color: black;
     margin-top: 4%;
     margin-left: 2%;
     margin-right: 2%;

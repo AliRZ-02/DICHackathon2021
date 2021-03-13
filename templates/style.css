@@ -65,6 +65,10 @@ body {
     margin-right: 2%;
 }
 
+#visualization img {
+    border-radius: 15px;
+}
+
 #footer {
     margin-top: 5%;
     font-size: large;
@@ -86,6 +90,12 @@ body {
 }
 
 .row h4 {
-    font-size: 15px;
+    margin-top: 4%;
+    font-size: 25px;
     text-align: center;
+    padding: 2%;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
 }

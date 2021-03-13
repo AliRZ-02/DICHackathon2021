@@ -65,6 +65,10 @@ body {
     margin-right: 2%;
 }
 
+#visualization img {
+    border-radius: 15px;
+}
+
 #footer {
     margin-top: 5%;
     font-size: large;

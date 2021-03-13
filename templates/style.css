@@ -67,8 +67,9 @@ body {
 
 #footer {
     margin-top: 5%;
-    background-color: gray;
+    font-size: large;
     text-align: center;
+    background-color: gray;
 }
 
 .row h1 {

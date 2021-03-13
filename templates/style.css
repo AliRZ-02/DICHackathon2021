@@ -83,3 +83,8 @@ body {
     font-size: 36px;
     text-align: center;
 }
+
+.row h4 {
+    font-size: 15px;
+    text-align: center;
+}

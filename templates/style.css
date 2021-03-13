@@ -69,6 +69,11 @@ body {
     border-radius: 15px;
 }
 
+#buttonBox {
+    margin-top: 3%;
+    text-align: center;
+}
+
 #footer {
     margin-top: 5%;
     font-size: large;

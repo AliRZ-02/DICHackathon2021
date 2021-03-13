@@ -107,13 +107,18 @@ body {
 }
 
 .row h3 {
+    color: rgba(0, 33, 115, 1);
     font-size: 36px;
     text-align: center;
     text-decoration: underline;
 }
 
-.row h4 {
-    font-size: 28px;
-    text-align: center;
-    text-decoration: underline;
+.carousel-caption h1 {
+    font-size: 20px;
+    color: black;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 10px
 }

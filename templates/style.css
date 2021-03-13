@@ -61,13 +61,14 @@ body {
     background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
     border-style: solid;
     border-color: black;
-    margin-top: 4%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #visualization img {
     border-radius: 15px;
+    padding: 2%;
 }
 
 #buttonBox {

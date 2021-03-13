@@ -1,5 +1,5 @@
 body {
-    background: url(../templates/images/background_one.png) no-repeat center center fixed;
+    background: url(../templates/images/waterfall.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -12,17 +12,13 @@ body {
     src: url(../templates/fonts/Candarab.ttf);
 }
 
-
-/*
-.row h1 {
-    color: white;
-    font-family: titleFont;
+@font-face {
+    font-family: actualTitleFont;
+    src: url(../templaes/fonts/EBGaramond-Regular.ttf);
 }
-*/
 
 #websiteName {
     text-align: center;
-    font-family: titleFont;
     color: rgba(0, 33, 115, 1);
     width: 40%;
     margin-top: 2%;
@@ -34,16 +30,25 @@ body {
     border-color: black;
 }
 
+#websiteName h1 {
+    font-family: actualTitleFont;
+    text-decoration: bold;
+}
+
+#websiteName h2 {
+    font-family: titleFont;
+}
+
 #missionstatement {
     margin-top: 5%;
     margin-left: 5%;
     color: #fbfaf5;
     font-size: 15px;
     border-radius: 15px;
-    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
+    background-image: linear-gradient(to bottom right, rgba(137, 126, 236, 0.6), black);
     border-style: solid;
     border-color: black;
-    padding: 2%;
+    padding: 1%;
 }
 
 #solution {
@@ -51,17 +56,18 @@ body {
     color: #fbfaf5;
     font-size: 15px;
     border-radius: 15px;
-    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
+    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.6), black);
     border-style: solid;
     border-color: black;
+    padding: 1%;
 }
 
 #visualization {
     border-radius: 15px;
-    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.4), rgba(146, 135, 238, 1));
+    background-image: linear-gradient(to bottom right, rgba(146, 135, 238, 0.6), black);
     border-style: solid;
     border-color: black;
-    margin-top: 2%;
+    margin-top: 4%;
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -107,13 +113,18 @@ body {
 }
 
 .row h3 {
+    color: rgb(62, 189, 24);
     font-size: 36px;
     text-align: center;
     text-decoration: underline;
 }
 
-.row h4 {
-    font-size: 28px;
-    text-align: center;
-    text-decoration: underline;
+.carousel-caption h1 {
+    font-size: 20px;
+    color: black;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 10px
 }

@@ -23,8 +23,11 @@ db = SQLAlchemy(app)
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     city = db.Column(db.String(200), nullable=False)
-    temp = db.Column(db.Integer)
+    temp = db.Column(db.Integer, primary_key=False)
     graph = db.Column(db.String(200))
+    lat = db.Column(db.Integer, primary_key=False)
+    long = db.Column(db.Integer, primary_key=False)
+    year = db.Column(db.Integer, primary_key=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
@@ -35,32 +38,35 @@ class Todo(db.Model):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    print("Here")
-    return redirect('/visualizations')
+    return render_template('homePage.html')
 
-@app.route('/visualizations', methods=['POST', 'GET'])
+
+@app.route('/visualizations', methods=['GET', 'POST'])
 def visualizations():
-    if request.method == 'POST':
-        print("Here")
+    print("WOWOWOW")
+    print(str(request.method))
+    if str(request.method) == 'POST':
+        print("POST")
         try:
+            print("Trying")
             city_name = request.form['city_name']
             year = round(float(request.form['year']))
         except:
             print("Error")
             return redirect('/visualizations')
-        print("Here")
         readerAHCCD3 = csv.reader(open('static/Resources/AHCCD3.csv', 'r', encoding="ISO-8859-1"))
         cities = {}
         name_list = []
 
         for name, id in readerAHCCD3:
-            cities[name] = id
-            name_list.append(name)
+            cities[name.lower()] = id
+            name_list.append(name.lower())
 
         # Uses the difflib library to find the closest name match to the input name
         try:
-            matches = difflib.get_close_matches(city_name, name_list, n=1)
+            matches = difflib.get_close_matches(city_name.lower(), name_list, n=1, cutoff=0.8)
             city = matches[0]
+            print(city)
             good = cities[matches[0]]
             ahccd3 = True
         except:
@@ -70,27 +76,32 @@ def visualizations():
             ahccd3 = False
 
             for name, id in readerCLIMATE:
-                cities2[name] = id
-                name_list2.append(name)
+                cities2[name.lower()] = id
+                name_list2.append(name.lower())
             try:
-                matches = difflib.get_close_matches(city_name, name_list, n=1)
+                matches = difflib.get_close_matches(city_name.lower(), name_list2, n=1)
                 city = matches[0]
                 good = cities2[matches[0]]
             except:
                 print("Man")
                 return redirect('/visualizations')
         if ahccd3:
-            getter = getData.get_data(name=city, number=good, year=year)
+            print(year)
+            getter = getData.get_data(name=city, number=good, neededYear=year)
+            lat, long = getData.get_lat_long(number=good)
         else:
             getter = climateData.climate_data(name=city, number=good, year=year)
-        new_city = Todo(city=city, temp=getter, graph=("../static/" + city + ".png"))
+            lat, long = climateData.get_lat_long(number=good)
+        new_city = Todo(city=(city.upper()), temp=getter, graph=("../static/" + city.upper() + ".png"),
+                        year=year, lat=lat, long=long)
         db.session.add(new_city)
         db.session.commit()
         print(getter)
         print(city)
         print("../static/" + city + ".png")
-        return redirect('/results')
+        return redirect('/visualizations')
     else:
+        print('HERE')
         cities = Todo.query.order_by(Todo.date_created.desc()).all()
         return render_template('visualizations.html', cities=cities)
 
@@ -101,4 +112,4 @@ def error():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

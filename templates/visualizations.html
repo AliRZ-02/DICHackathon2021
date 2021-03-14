@@ -4,8 +4,8 @@ Date: Jan 8 2021
 Purpose: HTML file describing the layout for the main site
 -->
 
-<DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -51,7 +51,7 @@ Purpose: HTML file describing the layout for the main site
 
 <!-- If the request returns an error, an alert page opens up notifying the user about said issues -->
 
-<body class="px-0; mx-0" data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="">
+<body class="px-0; mx-0">
 
 <!-- The Main Icon and Name is put in a block that is visible here -->
 
@@ -71,7 +71,7 @@ Purpose: HTML file describing the layout for the main site
 <div class="container-fluid p-0 border-white col-sm-12" style="overflow: hidden; margin-top: 2%; margin-bottom: 2%">
     <div class="form-group my-auto" style="font-size: small">
 
-        <form class="row" action="/" method="POST" style="width: 100%; margin-left: 0.25%" autocomplete="off">
+        <form class="row" action="/visualizations" method="POST" style="width: 100%; margin-left: 0.25%" autocomplete="off">
             <div class="col-sm-2">
 
             </div>
@@ -88,6 +88,7 @@ Purpose: HTML file describing the layout for the main site
 
     </div>
 </div>
+{%  if cities[0] is defined %}
 <div class="container border border-dark bg-dark rounded">
     <h1>
 
@@ -95,7 +96,9 @@ Purpose: HTML file describing the layout for the main site
     <div class="row rounded">
         <div class="col-sm-12 text-light rounded " style="text-align: center">
         <h2>
-            Toronto
+            {% if cities[0] is defined %}
+                {{ cities[0].city }}
+            {% endif %}
         </h2>
     </div>
 </div>
@@ -116,8 +119,11 @@ Purpose: HTML file describing the layout for the main site
     <div class="col-sm-6">
         <div class="container-fluid bg-dark text-light rounded border border-danger">
             <h1 style="text-align: center">
-            Graph
+            Temperature Trends
         </h1>
+            <img src="{{ url_for('static', filename=''+cities[0].graph) }}"
+            style="display: flex; align-items: center; flex-wrap: wrap; height: 75%; width: auto"
+                     class="d-block mx-auto my-auto" alt="Error">
         </div>
     </div>
     <div class="col-sm-6">
@@ -127,19 +133,11 @@ Purpose: HTML file describing the layout for the main site
         </h3>
             <ul class="list-inline">
                 <li class="list" style="font-size: medium; text-align: center">
-                    Predicted Average Temperature:
+                    Temperature Prediction:
                     <ul class="list-inline">
                         <li class="list" style="font-size: medium; text-align: center">
-                    YEAR:
+                            <b>{{ cities[0].year }}</b> : {{ cities[0].temp }} CELSIUS
                 </li>
-                    </ul>
-                </li>
-                <li class="list" style="font-size: medium; text-align: center">
-                    Predicted Temperature Variance:
-                    <ul class="list-inline">
-                        <li class="list" style="font-size: medium; text-align: center">
-                            YEAR:
-                        </li>
                     </ul>
                 </li>
             </ul>
@@ -156,7 +154,7 @@ Purpose: HTML file describing the layout for the main site
 <script>
 
   // initialize the map
-  var map = L.map('mapid').setView([43.65, -79.38], 13);
+  var map = L.map('mapid').setView([{{ cities[0].lat }}, {{ cities[0].long }}], 11);
 
   // load a tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -168,9 +166,9 @@ Purpose: HTML file describing the layout for the main site
 
   </script>
 
-
+{% endif %}
 <!-- Footer and Credits -->
-
+</body>
 <footer class="col-sm-12 card-footer bg-light" style="margin-top: 2%">
     <div class="row">
         <div class="col-sm-12 my-auto">
@@ -181,4 +179,4 @@ Purpose: HTML file describing the layout for the main site
         </div>
     </div>
 </footer>
-</body></html>
+</html>

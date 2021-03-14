@@ -96,7 +96,7 @@ def visualizations():
             lat, long = climateData.get_lat_long(number=good)
         if getter == -900:
             getter = "N/A"
-        new_city = Todo(city=(city.upper()), temp=getter, graph=("../static/" + city.upper() + ".png"),
+        new_city = Todo(city=(city.upper()), temp=getter, graph=(city.upper() + ".png"),
                         year=year, lat=lat, long=long)
         db.session.add(new_city)
         db.session.commit()

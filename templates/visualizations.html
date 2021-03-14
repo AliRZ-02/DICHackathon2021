@@ -57,10 +57,16 @@ Purpose: HTML file describing the layout for the main site
 
 <div class="container p-0 text-dark" style="overflow: hidden">
     <div class="row">
+        <div class="col-sm-12">
+            <h1>
 
+            </h1>
+        </div>
         <div class="col-sm-12 my-auto">
-            <h1 style="font-weight: lighter;
-                margin-top: 0; font-size: 10vw; text-align: center"> Climatech </h1>
+            <button class="btn btn-block btn-outline-dark" style="font-weight: lighter;
+                margin-top: 0; font-size: 10vw; text-align: center"
+                onclick="location.href = '{{ url_for('index') }}'"> Climatech
+            </button>
         </div>
 
     </div>
@@ -124,6 +130,9 @@ Purpose: HTML file describing the layout for the main site
             <img src="{{ url_for('static', filename=''+cities[0].graph) }}"
             style="display: flex; align-items: center; flex-wrap: wrap; height: 75%; width: auto"
                      class="d-block mx-auto my-auto" alt="Error">
+            <h1>
+
+            </h1>
         </div>
     </div>
     <div class="col-sm-6">
@@ -136,11 +145,17 @@ Purpose: HTML file describing the layout for the main site
                     Temperature Prediction:
                     <ul class="list-inline">
                         <li class="list" style="font-size: medium; text-align: center">
-                            <b>{{ cities[0].year }}</b> : {{ cities[0].temp }} CELSIUS
+                            <b>{{ cities[0].year }}</b> : {{ cities[0].temp }} &#176C
                 </li>
                     </ul>
                 </li>
             </ul>
+            <h4 style="text-align: center">
+                More Predictors Coming Soon!
+            </h4>
+            <h1>
+
+            </h1>
         </div>
         <div class="col-sm-12">
             <h1>
@@ -163,7 +178,6 @@ Purpose: HTML file describing the layout for the main site
       maxZoom: 17,
       minZoom: 5
     }).addTo(map);
-
   </script>
 
 {% endif %}

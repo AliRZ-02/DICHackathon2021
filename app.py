@@ -38,6 +38,8 @@ class Todo(db.Model):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    db.drop_all()
+    db.create_all()
     return render_template('homePage.html')
 
 
@@ -106,10 +108,7 @@ def visualizations():
         return render_template('visualizations.html', cities=cities)
 
 
-@app.route('/error', methods=['POST', 'GET'])
-def error():
-    return index()
-
-
 if __name__ == "__main__":
+    db.drop_all()
+    db.create_all()
     app.run(debug=True)

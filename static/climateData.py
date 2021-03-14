@@ -71,7 +71,7 @@ def climate_data(name = "Default", number = 2100200, year = 2021):
     plt.plot(X2, Y2, 'ro')
     plt.plot(X2, model.coef_ * X2 + model.intercept_)
     fig = plt.gcf()
-    plt.savefig(name, bbox_inches="tight")
+    plt.savefig("static/"+name, bbox_inches="tight")
     plt.close(fig)
     return round(predictions[0][0], 3)
 

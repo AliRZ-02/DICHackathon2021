@@ -6,6 +6,6 @@
 from app import db
 
 # While working on the project, whenever I needed to clean the database, I would simply run this file
-
-db.drop_all()
-db.create_all()
+def db_reset():
+    db.drop_all()
+    db.create_all()

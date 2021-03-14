@@ -1,5 +1,5 @@
 body {
-    background: url(../templates/images/waterfall.png) no-repeat center center fixed;
+    background: url(../static/images/waterfall.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,12 +9,12 @@ body {
 
 @font-face {
     font-family: titleFont;
-    src: url(../templates/fonts/Candarab.ttf);
+    src: url(/fonts/Candarab.ttf);
 }
 
 @font-face {
     font-family: actualTitleFont;
-    src: url(../templaes/fonts/EBGaramond-Regular.ttf);
+    src: url(/fonts/EBGaramond-Regular.ttf);
 }
 
 #websiteName {

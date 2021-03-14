@@ -57,7 +57,7 @@ def get_data(name = "Default", number = 12345, neededYear = 2021):
         plt.savefig("static/"+name, bbox_inches="tight")
         plt.close(fig)
     except Exception as e:
-        print(e)
+        print("MatPlotLib Error: ", e)
         pass
     new = predictions[0][0]
     return round(new, 3)

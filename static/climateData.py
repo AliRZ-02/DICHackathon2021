@@ -23,7 +23,7 @@ def climate_data(name = "Default", number = 2100200, year = 2021):
 
     print(id)
     data_dict = {}
-    for i in range(startYear, endYear):
+    for i in range(startYear, endYear, 2):
         sum = 0
         counter = 0
         for j in range(1, 13, 3):

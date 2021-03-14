@@ -45,12 +45,12 @@ def index():
 
 @app.route('/visualizations', methods=['GET', 'POST'])
 def visualizations():
-    print("WOWOWOW")
+    print("VISUALIZATIONS PAGE")
     print(str(request.method))
     if str(request.method) == 'POST':
         print("POST")
         try:
-            print("Trying")
+            print("Searching")
             city_name = request.form['city_name']
             year = round(float(request.form['year']))
         except:
@@ -84,8 +84,8 @@ def visualizations():
                 matches = difflib.get_close_matches(city_name.lower(), name_list2, n=1)
                 city = matches[0]
                 good = cities2[matches[0]]
-            except:
-                print("Man")
+            except Exception as e:
+                print("Error: ", e)
                 return redirect('/visualizations')
         if ahccd3:
             print(year)
@@ -94,6 +94,8 @@ def visualizations():
         else:
             getter = climateData.climate_data(name=city, number=good, year=year)
             lat, long = climateData.get_lat_long(number=good)
+        if getter == -900:
+            getter = "N/A"
         new_city = Todo(city=(city.upper()), temp=getter, graph=("../static/" + city.upper() + ".png"),
                         year=year, lat=lat, long=long)
         db.session.add(new_city)
@@ -103,7 +105,7 @@ def visualizations():
         print("../static/" + city + ".png")
         return redirect('/visualizations')
     else:
-        print('HERE')
+        print('GET')
         cities = Todo.query.order_by(Todo.date_created.desc()).all()
         return render_template('visualizations.html', cities=cities)
 

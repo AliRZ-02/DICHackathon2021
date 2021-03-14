@@ -20,7 +20,7 @@ def get_data(name = "Default", number = 12345, neededYear = 2021):
         except:
             pass
     if len(getInfoList) == 0:
-        return 0
+        return -900
     X = [(list(getInfoList.keys()))]
     for element in X:
         for elements in element:

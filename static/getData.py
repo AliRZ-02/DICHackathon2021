@@ -47,12 +47,18 @@ def get_data(name = "Default", number = 12345, neededYear = 2021):
     model = LinearRegression()
     model.fit(X2, Y2)
     predictions = model.predict([[neededYear]])
-    plt.plot(X2, Y2, 'ro')
-    plt.plot(X2, (model.coef_ * X2) + model.intercept_)
-    fig = plt.gcf()
-    # plt.show()
-    plt.savefig("static/"+name, bbox_inches="tight")
-    plt.close(fig)
+    print(X2)
+    print(Y2)
+    try:
+        plt.plot(X2, Y2, 'ro')
+        plt.plot(X2, (model.coef_ * X2) + model.intercept_)
+        fig = plt.gcf()
+        # plt.show()
+        plt.savefig("static/"+name, bbox_inches="tight")
+        plt.close(fig)
+    except Exception as e:
+        print(e)
+        pass
     new = predictions[0][0]
     return round(new, 3)
 

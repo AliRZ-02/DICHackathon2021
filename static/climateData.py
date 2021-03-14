@@ -68,11 +68,15 @@ def climate_data(name = "Default", number = 2100200, year = 2021):
     model = LinearRegression()
     model.fit(X2, Y2)
     predictions = model.predict([[year]])
-    plt.plot(X2, Y2, 'ro')
-    plt.plot(X2, model.coef_ * X2 + model.intercept_)
-    fig = plt.gcf()
-    plt.savefig("static/"+name, bbox_inches="tight")
-    plt.close(fig)
+    try:
+        plt.plot(X2, Y2, 'ro')
+        plt.plot(X2, model.coef_ * X2 + model.intercept_)
+        fig = plt.gcf()
+        plt.savefig("static/"+name, bbox_inches="tight")
+        plt.close(fig)
+    except Exception as e:
+        print(e)
+        pass
     return round(predictions[0][0], 3)
 
 

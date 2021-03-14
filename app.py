@@ -89,10 +89,10 @@ def visualizations():
                 return redirect('/visualizations')
         if ahccd3:
             print(year)
-            getter = getData.get_data(name=city, number=good, neededYear=year)
+            getter = getData.get_data(name=city.upper(), number=good, neededYear=year)
             lat, long = getData.get_lat_long(number=good)
         else:
-            getter = climateData.climate_data(name=city, number=good, year=year)
+            getter = climateData.climate_data(name=city.upper(), number=good, year=year)
             lat, long = climateData.get_lat_long(number=good)
         if getter == -900:
             getter = "N/A"
